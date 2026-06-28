@@ -2,11 +2,28 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Sun, Moon } from 'lucide-react'
+import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
 import { useScroll } from 'motion/react'
+
+function ModeToggle() {
+    const { resolvedTheme, setTheme } = useTheme()
+    const [mounted, setMounted] = React.useState(false)
+    React.useEffect(() => setMounted(true), [])
+    const isDark = resolvedTheme === 'dark'
+    return (
+        <button
+            type="button"
+            aria-label="Toggle theme"
+            onClick={() => setTheme(isDark ? 'light' : 'dark')}
+            className="text-muted-foreground hover:text-foreground hover:border-foreground/30 inline-flex size-9 items-center justify-center rounded-lg border transition-colors">
+            {mounted && isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
+        </button>
+    )
+}
 
 const transitionVariants = {
     item: {
@@ -139,7 +156,8 @@ export const HeroHeader = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-5 sm:space-y-0 md:w-fit">
+                            <div className="flex w-full items-center space-y-3 sm:flex-row sm:gap-5 sm:space-y-0 md:w-fit">
+                                <ModeToggle />
                                 <Button
                                     asChild
                                     variant="outline"

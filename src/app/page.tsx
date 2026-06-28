@@ -83,9 +83,7 @@ export default function Home() {
           <h2 className="mb-12 text-4xl font-black uppercase leading-[0.95] tracking-tight md:text-6xl">
             Hey, I&apos;m <span className="text-primary">Bryan</span>.
             <br />
-            I turn data
-            <br />
-            <span className="text-muted-foreground">into decisions.</span>
+            <span className="text-muted-foreground">Nice to meet you.</span>
           </h2>
           <div className="grid gap-12 md:grid-cols-2">
             <p className="text-2xl font-semibold leading-snug tracking-tight">
