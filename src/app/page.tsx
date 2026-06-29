@@ -109,11 +109,11 @@ export default function Home() {
       <section id="skills" className="bg-background relative border-t py-24 md:py-32">
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading num="02" title="Skills" />
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             {skills.map((s) => (
               <div
                 key={s.title}
-                className="hover:border-primary rounded-2xl border bg-card p-7 transition-colors"
+                className="hover:border-primary min-w-0 overflow-hidden rounded-2xl border bg-card p-7 transition-colors"
               >
                 <h3 className="mb-4 text-lg font-semibold">{s.title}</h3>
                 <Marquee duration={18} pauseOnHover fadeAmount={6}>
@@ -136,11 +136,11 @@ export default function Home() {
       <section id="projects" className="bg-background relative border-t py-24 md:py-32">
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading num="03" title="Projects" />
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {projects.map((p) => (
               <article
                 key={p.title}
-                className="hover:border-primary group flex flex-col rounded-2xl border bg-card p-7 transition-colors"
+                className="hover:border-primary group flex min-w-0 flex-col rounded-2xl border bg-card p-7 transition-colors"
               >
                 <span className="text-primary font-mono text-xs tracking-wide">{p.tech}</span>
                 <h3 className="mb-3 mt-3 text-xl font-bold tracking-tight">{p.title}</h3>
