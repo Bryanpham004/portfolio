@@ -94,6 +94,15 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		let count = 0;
 		let animationId: number = 0;
 
+		// Wake the wave on hover / tap; it settles back to still when idle.
+		let activeUntil = 0;
+		const wake = () => {
+			activeUntil = performance.now() + 1500;
+		};
+		window.addEventListener('pointermove', wake);
+		window.addEventListener('pointerdown', wake);
+		window.addEventListener('touchstart', wake, { passive: true });
+
 		// Animation function
 		const animate = () => {
 			animationId = requestAnimationFrame(animate);
@@ -127,7 +136,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 			}
 
 			renderer.render(scene, camera);
-			count += 0.1;
+			if (performance.now() < activeUntil) count += 0.1;
 		};
 
 		// Handle window resize
@@ -155,6 +164,9 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		// Cleanup function
 		return () => {
 			window.removeEventListener('resize', handleResize);
+			window.removeEventListener('pointermove', wake);
+			window.removeEventListener('pointerdown', wake);
+			window.removeEventListener('touchstart', wake);
 
 			if (sceneRef.current) {
 				cancelAnimationFrame(sceneRef.current.animationId);
