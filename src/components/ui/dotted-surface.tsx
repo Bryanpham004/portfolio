@@ -39,10 +39,17 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		camera.position.set(0, 280, 1100);
 		camera.lookAt(0, 120, 0);
 
-		const renderer = new THREE.WebGLRenderer({
-			alpha: true,
-			antialias: true,
-		});
+		let renderer: THREE.WebGLRenderer;
+		try {
+			renderer = new THREE.WebGLRenderer({
+				alpha: true,
+				antialias: true,
+			});
+		} catch {
+			// WebGL unavailable on this device/browser — skip the animation
+			// gracefully so the rest of the page still renders.
+			return;
+		}
 		renderer.setPixelRatio(window.devicePixelRatio);
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		renderer.setClearColor(scene.fog.color, 0);
@@ -94,15 +101,6 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		let count = 0;
 		let animationId: number = 0;
 
-		// Wake the wave on hover / tap; it settles back to still when idle.
-		let activeUntil = 0;
-		const wake = () => {
-			activeUntil = performance.now() + 1500;
-		};
-		window.addEventListener('pointermove', wake);
-		window.addEventListener('pointerdown', wake);
-		window.addEventListener('touchstart', wake, { passive: true });
-
 		// Animation function
 		const animate = () => {
 			animationId = requestAnimationFrame(animate);
@@ -136,7 +134,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 			}
 
 			renderer.render(scene, camera);
-			if (performance.now() < activeUntil) count += 0.1;
+			count += 0.1;
 		};
 
 		// Handle window resize
@@ -164,9 +162,6 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 		// Cleanup function
 		return () => {
 			window.removeEventListener('resize', handleResize);
-			window.removeEventListener('pointermove', wake);
-			window.removeEventListener('pointerdown', wake);
-			window.removeEventListener('touchstart', wake);
 
 			if (sceneRef.current) {
 				cancelAnimationFrame(sceneRef.current.animationId);
