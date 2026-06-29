@@ -21,8 +21,8 @@ const projects = [
   {
     tech: "PYTHON · SQL",
     title: "Automated Data Pipeline & Dashboard",
-    desc: "Replaced a manual reporting process with a pipeline that ingests, cleans, and validates raw data, with checks that catch bad rows before they reach a self-serve dashboard the team can trust.",
-    link: "https://github.com/Bryanpham004",
+    desc: "End-to-end ETL that validates and cleans a messy 20K-row order feed (quarantining 12% of bad rows with reasons), loads it into a SQLite warehouse, and renders a SQL-driven dashboard — surfacing $7.5M revenue and a top-20%-of-customers = 59% Pareto.",
+    link: "https://github.com/Bryanpham004/data-pipeline",
   },
   {
     tech: "UNITY · C#",
