@@ -161,14 +161,16 @@ export const HeroHeader = () => {
                                 <Button
                                     asChild
                                     variant="outline"
-                                    size="sm">
+                                    size="sm"
+                                    className="w-24 justify-center">
                                     <Link href="https://github.com/Bryanpham004" target="_blank" rel="noopener">
                                         <span>GitHub</span>
                                     </Link>
                                 </Button>
                                 <Button
                                     asChild
-                                    size="sm">
+                                    size="sm"
+                                    className="w-24 justify-center">
                                     <Link href="#contact">
                                         <span>Contact</span>
                                     </Link>
@@ -185,7 +187,7 @@ export const HeroHeader = () => {
 const Logo = ({ className }: { className?: string }) => {
     return (
         <span className={cn('font-mono text-lg font-bold tracking-tight', className)}>
-            bryan&nbsp;pham
+            Bryan&nbsp;Pham
         </span>
     )
 }
