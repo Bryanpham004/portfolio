@@ -53,7 +53,7 @@ const experience = [
     ],
   },
   {
-    date: "High School",
+    date: "2018 — 2022",
     role: "Instructor & Program Lead",
     org: "Computer Engineers of the Next Generation",
     points: [
@@ -62,7 +62,7 @@ const experience = [
     ],
   },
   {
-    date: "High School",
+    date: "2018 — 2022",
     role: "Volunteer Technician",
     org: "EqOpTech",
     points: [
