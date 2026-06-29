@@ -72,7 +72,7 @@ function SectionHeading({ num, title }: { num: string; title: string }) {
 export default function Home() {
   return (
     <>
-      <DottedSurface />
+      <DottedSurface className="overflow-hidden" />
       <HeroSection />
 
       {/* STORY */}

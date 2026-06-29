@@ -122,9 +122,9 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply bg-background font-sans;
+    @apply bg-background font-sans overflow-x-hidden;
   }
   body {
-    @apply text-foreground;
+    @apply text-foreground w-full overflow-x-hidden;
   }
 }
