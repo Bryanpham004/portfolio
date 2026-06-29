@@ -215,7 +215,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-6 font-mono text-xs text-muted-foreground">
           <span>© 2026 Bryan Pham — Built with Next.js.</span>
           <div className="flex gap-4">
-            <Link href="https://www.linkedin.com/in/bryan-pham" target="_blank" rel="noopener" className="hover:text-primary">LinkedIn</Link>
+            <Link href="https://www.linkedin.com/in/bryan-pham-5775671a3/" target="_blank" rel="noopener" className="hover:text-primary">LinkedIn</Link>
             <Link href="https://github.com/Bryanpham004" target="_blank" rel="noopener" className="hover:text-primary">GitHub</Link>
           </div>
         </div>
