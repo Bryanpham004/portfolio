@@ -185,7 +185,7 @@ export const HeroHeader = () => {
 const Logo = ({ className }: { className?: string }) => {
     return (
         <span className={cn('font-mono text-lg font-bold tracking-tight', className)}>
-            bryan<span className="text-primary">.</span>pham
+            bryan&nbsp;pham
         </span>
     )
 }
