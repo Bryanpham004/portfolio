@@ -34,6 +34,15 @@ const projects = [
 
 const experience = [
   {
+    date: "Oct 2023 — Sep 2025",
+    role: "Course Director",
+    org: "AI at UCR (AIR)",
+    points: [
+      "Designed presentations and course curriculum on AI/ML implementation and emerging tech for club members.",
+      "Built reusable learning materials and onboarding content that helped technical and non-technical students contribute to applied AI projects.",
+    ],
+  },
+  {
     date: "Jun 2023 — Sep 2023",
     role: "Data Analytics Intern",
     org: "Bright Analytics",
@@ -59,6 +68,15 @@ const experience = [
     points: [
       "Refurbished and configured Chromebooks for students who couldn't afford them.",
       "Diagnosed hardware issues with strong attention to detail and quality.",
+    ],
+  },
+  {
+    date: "2022 — Jun 2026",
+    role: "B.S. Data Science",
+    org: "University of California, Riverside",
+    points: [
+      "GPA 3.51 · Dean's List.",
+      "Coursework: Computer Science I & II, Data Structures & Algorithms, AI Programming, Statistics, Linear Algebra.",
     ],
   },
 ];
