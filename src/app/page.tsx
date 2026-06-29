@@ -71,11 +71,11 @@ const experience = [
     ],
   },
   {
-    date: "2022 — Jun 2026",
+    date: "Sep 2022 — Jun 2026",
     role: "B.S. Data Science",
     org: "University of California, Riverside",
     points: [
-      "GPA 3.51 · Dean's List.",
+      "GPA 3.21",
       "Coursework: Computer Science I & II, Data Structures & Algorithms, AI Programming, Statistics, Linear Algebra.",
     ],
   },
