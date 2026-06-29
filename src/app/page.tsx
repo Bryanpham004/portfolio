@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { HeroSection } from "@/components/ui/hero-section-2";
 import { DottedSurface } from "@/components/ui/dotted-surface";
+import { Marquee } from "@/components/ui/marquee";
 import { Button } from "@/components/ui/button";
 
 const skills = [
@@ -115,16 +116,16 @@ export default function Home() {
                 className="hover:border-primary rounded-2xl border bg-card p-7 transition-colors"
               >
                 <h3 className="mb-4 text-lg font-semibold">{s.title}</h3>
-                <div className="flex flex-wrap gap-2">
+                <Marquee duration={18} pauseOnHover fadeAmount={6}>
                   {s.items.map((i) => (
                     <span
                       key={i}
-                      className="rounded-full border px-3 py-1 font-mono text-xs text-foreground"
+                      className="mx-1.5 whitespace-nowrap rounded-full border px-3 py-1 font-mono text-xs text-foreground"
                     >
                       {i}
                     </span>
                   ))}
-                </div>
+                </Marquee>
               </div>
             ))}
           </div>
