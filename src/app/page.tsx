@@ -81,13 +81,13 @@ export default function Home() {
           <p className="text-primary mb-7 font-mono text-sm uppercase tracking-[0.18em]">
             01 — The person behind the data
           </p>
-          <h2 className="mb-12 text-4xl font-black uppercase leading-[0.95] tracking-tight md:text-6xl">
+          <h2 className="mb-12 text-3xl font-black uppercase leading-[0.95] tracking-tight sm:text-4xl md:text-6xl">
             Hey, I&apos;m <span className="text-primary">Bryan</span>.
             <br />
             <span className="text-muted-foreground">Nice to meet you.</span>
           </h2>
           <div className="grid gap-12 md:grid-cols-2">
-            <p className="text-2xl font-semibold leading-snug tracking-tight">
+            <p className="text-xl font-semibold leading-snug tracking-tight sm:text-2xl">
               I didn&apos;t fall in love with data because of the math. I fell for the moment a messy spreadsheet finally tells you something true.
             </p>
             <div className="space-y-5 text-lg text-muted-foreground">
@@ -191,7 +191,7 @@ export default function Home() {
       {/* CONTACT */}
       <section id="contact" className="bg-background relative border-t py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-4xl font-black uppercase leading-[0.95] tracking-tight md:text-6xl">
+          <h2 className="text-3xl font-black uppercase leading-[0.95] tracking-tight sm:text-4xl md:text-6xl">
             Let&apos;s
             <br />
             Work Together

@@ -71,7 +71,7 @@ export function HeroSection() {
                                         Data Scientist · San Jose, CA
                                     </p>
                                     <h1
-                                        className="mt-2 max-w-3xl text-balance text-5xl font-semibold tracking-tight md:text-7xl lg:mt-6">
+                                        className="mt-2 max-w-3xl text-balance text-4xl font-semibold tracking-tight sm:text-5xl md:text-7xl lg:mt-6">
                                         I turn messy data into decisions.
                                     </h1>
                                 </AnimatedGroup>
@@ -156,7 +156,7 @@ export const HeroHeader = () => {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="flex w-full items-center space-y-3 sm:flex-row sm:gap-5 sm:space-y-0 md:w-fit">
+                            <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:gap-5 md:w-fit">
                                 <ModeToggle />
                                 <Button
                                     asChild

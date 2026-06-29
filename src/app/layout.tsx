@@ -30,7 +30,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${exo.variable} ${robotoMono.variable} h-full antialiased`}
     >
-      <body className="text-foreground min-h-full flex flex-col">
+      <body className="text-foreground min-h-full flex flex-col overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
