@@ -15,17 +15,20 @@ const projects = [
   {
     tech: "PYTHON · MACHINE LEARNING",
     title: "Vehicle Detection & Image Classification",
-    desc: "Built and tested a detection algorithm to recognize car models across varied image scenarios. Iterated on a 7-person team to improve classifier accuracy and inference speed.",
+    desc: "HOG + Linear SVM pipeline that detects vehicles vs. non-vehicles on the full CIFAR-10 set — 85.7% accuracy and 0.925 ROC AUC, with a per-class error analysis (ships easiest, airplanes hardest).",
+    link: "https://github.com/Bryanpham004/vehicle-detection",
   },
   {
     tech: "PYTHON · SQL",
     title: "Automated Data Pipeline & Dashboard",
     desc: "Replaced a manual reporting process with a pipeline that ingests, cleans, and validates raw data, with checks that catch bad rows before they reach a self-serve dashboard the team can trust.",
+    link: "https://github.com/Bryanpham004",
   },
   {
     tech: "UNITY · C#",
     title: "Physics-Based Fighting Game",
     desc: "Shipped an interactive game with real-time UI, physics-based movement, and game logic. Built error handling to keep it stable and iterated with a small team on how it felt to play.",
+    link: "https://github.com/Bryanpham004",
   },
 ];
 
@@ -146,7 +149,7 @@ export default function Home() {
                 <h3 className="mb-3 mt-3 text-xl font-bold tracking-tight">{p.title}</h3>
                 <p className="flex-1 text-sm text-muted-foreground">{p.desc}</p>
                 <Link
-                  href="https://github.com/Bryanpham004"
+                  href={p.link}
                   target="_blank"
                   rel="noopener"
                   className="mt-6 inline-flex items-center gap-2 font-mono text-xs"
