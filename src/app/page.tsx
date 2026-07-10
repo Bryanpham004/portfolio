@@ -107,20 +107,30 @@ export default function Home() {
             <br />
             <span className="text-muted-foreground">Nice to meet you.</span>
           </h2>
-          <div className="grid gap-12 md:grid-cols-2">
-            <p className="text-xl font-semibold leading-snug tracking-tight sm:text-2xl">
-              I didn&apos;t fall in love with data because of the math. I fell for the moment a messy spreadsheet finally tells you something true.
-            </p>
-            <div className="space-y-5 text-lg text-muted-foreground">
-              <p>
-                I&apos;m a Data Science student at <strong className="text-foreground">UC Riverside</strong> (Class of 2026), based in San Jose. My path started with curiosity — taking apart problems, writing small programs, and asking &quot;what is this data actually saying?&quot;
+          <div className="grid gap-12 md:grid-cols-[300px_1fr] md:items-start">
+            <div className="mx-auto w-full max-w-[300px] overflow-hidden rounded-2xl border bg-card md:sticky md:top-28">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/headshot.jpg"
+                alt="Bryan Pham"
+                className="aspect-[3/4] w-full object-cover"
+              />
+            </div>
+            <div className="space-y-8">
+              <p className="text-xl font-semibold leading-snug tracking-tight sm:text-2xl">
+                I didn&apos;t fall in love with data because of the math. I fell for the moment a messy spreadsheet finally tells you something true.
               </p>
-              <p>
-                That curiosity turned into real work: a <strong className="text-foreground">machine-learning model</strong> that recognizes vehicles, <strong className="text-foreground">data pipelines</strong> that replaced hours of manual reporting, and an interactive game built from scratch with a team.
-              </p>
-              <p>
-                In my free time, I&apos;m into <strong className="text-foreground">investing</strong>. My hands-on start came earlier though — back in high school I taught kids to code and refurbished old computers to bring them back to life. That chapter&apos;s behind me now, but it&apos;s where my build-and-fix instinct first took root.
-              </p>
+              <div className="space-y-5 text-lg text-muted-foreground">
+                <p>
+                  I&apos;m a Data Science student at <strong className="text-foreground">UC Riverside</strong> (Class of 2026), based in San Jose. My path started with curiosity — taking apart problems, writing small programs, and asking &quot;what is this data actually saying?&quot;
+                </p>
+                <p>
+                  That curiosity turned into real work: a <strong className="text-foreground">machine-learning model</strong> that recognizes vehicles, <strong className="text-foreground">data pipelines</strong> that replaced hours of manual reporting, and an interactive game built from scratch with a team.
+                </p>
+                <p>
+                  In my free time, I&apos;m into <strong className="text-foreground">investing</strong>. My hands-on start came earlier though — back in high school I taught kids to code and refurbished old computers to bring them back to life. That chapter&apos;s behind me now, but it&apos;s where my build-and-fix instinct first took root.
+                </p>
+              </div>
             </div>
           </div>
         </div>
